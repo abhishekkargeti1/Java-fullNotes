@@ -1,1 +1,3 @@
-# Ducat-works
+# Java Notes with Syntax 
+Control Statement  
+Loop 
