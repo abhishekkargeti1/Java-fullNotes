@@ -153,8 +153,8 @@ public class ExerciseSheet2 {
 
     // Answer
     
-    Scanner sc = new Scanner(System.in);
-    int number = sc.nextInt();
+    // Scanner sc = new Scanner(System.in);
+    // int number = sc.nextInt();
     
     
 
