@@ -1,3 +1,4 @@
 # Java Notes with Syntax 
 Control Statement  
-Loop 
+Loops
+Exercise Sheets of above topic
