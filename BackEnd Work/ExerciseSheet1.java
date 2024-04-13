@@ -1,7 +1,7 @@
 import java.util.*;
 class ExerciseSheet1 {
     public static void main(String[] args) {
-      // 1.Write a Python program to accept two integers and check whether they are equal or not.
+      // 1.Write a Python/Java program to accept two integers and check whether they are equal or not.
       
     //   Answer
     
@@ -16,7 +16,7 @@ class ExerciseSheet1 {
         
         
         
-    // 2.Write a Python program to check whether a given number is even or odd.
+    // 2.Write a Python/Java program to check whether a given number is even or odd.
 
     //Answer
 
@@ -28,7 +28,7 @@ class ExerciseSheet1 {
     //     System.out.println("Odd number");
     // }
         
-    // 3.Write a Python program to check whether a given number is positive or negative.
+    // 3.Write a Python/Java program to check whether a given number is positive or negative.
 
     //Answer
 
@@ -42,7 +42,7 @@ class ExerciseSheet1 {
     //     System.out.println("Negative number");
     // }
         
-    // 4.Write a Python program to find whether a given year is a leap year or not.
+    // 4.Write a Python/Java program to find whether a given year is a leap year or not.
 
     // Answer
 
@@ -54,7 +54,7 @@ class ExerciseSheet1 {
     //     System.out.println("not a leap year");
     // }
 
-    //5.Write a Python program to read the age of a candidate and determine whether it is eligible for casting his/her own vote.
+    //5.Write a Python/Java program to read the age of a candidate and determine whether it is eligible for casting his/her own vote.
 
     // Scanner sc = new Scanner(System.in);
     // int age = sc.nextInt();
@@ -64,10 +64,10 @@ class ExerciseSheet1 {
     //     System.out.println("Not Eligible");
     // }
         
-    // 6.Write a Python program to accept the height of a person in centimeter and categorize the person according to their height.
+    // 6.Write a Python/Java program to accept the height of a person in centimeter and categorize the person according to their height.
     // Answer
 
-    // 7.Write a Python program to find the largest of three numbers.
+    // 7.Write a Python/Java program to find the largest of three numbers.
 
     //Answer
 
@@ -83,7 +83,7 @@ class ExerciseSheet1 {
     //     System.out.println("Num3 is greater");
     // }
         
-    // 8.Write a Python program to find the eligibility of admission for a professional course based on the following criteria:
+    // 8.Write a Python/Java program to find the eligibility of admission for a professional course based on the following criteria:
 
 // Eligibility Criteria : Marks in Maths >=65 and Marks in Phy >=55 and Marks in Chem>=50 and Total in all three subject >=190 or Total in Maths and Physics >=140 ------------------------------------- Input the marks obtained in Physics :65 Input the marks obtained in Chemistry :51 Input the marks obtained in Mathematics :72 Total marks of Maths, Physics and Chemistry : 190 Total marks of Maths and Physics : 137 The candidate is not eligible.
 
@@ -100,7 +100,7 @@ class ExerciseSheet1 {
 //         System.out.println("not Eligible");
 //     }
 
-// 9.Write a Python program to read roll no, name and marks of three subjects and calculate the total, percentage and division.
+// 9.Write a Python/Java program to read roll no, name and marks of three subjects and calculate the total, percentage and division.
 
 // Input the Roll Number of the student :784
 // Input the Name of the Student :James
@@ -133,7 +133,7 @@ class ExerciseSheet1 {
 //     System.out.println("Third Division");
 // }
 
-// 10.Write a Python program to read temperature in centigrade and display a suitable message according to temperature state below :
+// 10.Write a Python/Java program to read temperature in centigrade and display a suitable message according to temperature state below :
 
 // Temp < 0 then Freezing weather
 // Temp 0-10 then Very Cold weather
@@ -161,7 +161,7 @@ class ExerciseSheet1 {
 // }
 
 
-//11.Write a Python program to check whether a triangle is Equilateral, Isosceles or Scalene.
+//11.Write a Python/Java program to check whether a triangle is Equilateral, Isosceles or Scalene.
    
 //Answer
         
@@ -180,7 +180,7 @@ class ExerciseSheet1 {
     //     sc.close();
 
 
-    // 12.Write a Python program to check whether a triangle can be formed by the given value for the angles.
+    // 12.Write a Python/Java program to check whether a triangle can be formed by the given value for the angles.
 
     // Answer
 
@@ -197,7 +197,7 @@ class ExerciseSheet1 {
     //     System.out.println("Triangle cannot be formed with these angles.");
     // }
     
-    // 13.Write a Python program to check whether a character is an alphabet, digit or special character.
+    // 13.Write a Python/Java program to check whether a character is an alphabet, digit or special character.
 
     // Answer
 
@@ -211,7 +211,7 @@ class ExerciseSheet1 {
 //         System.out.println("Character");
 //     }
 
-    //14.Write a Python program to check whether an alphabet is a vowel or consonant.
+    //14.Write a Python/Java program to check whether an alphabet is a vowel or consonant.
     // Answer
 
     // Scanner sc = new Scanner(System.in);
@@ -223,7 +223,7 @@ class ExerciseSheet1 {
     //     System.out.println("Consonant");
     // }
 
-    // 15.Write a Python program to calculate profit and loss on a transaction.
+    // 15.Write a Python/Java program to calculate profit and loss on a transaction.
     //Answer
 
         // Scanner sc = new Scanner(System.in);
@@ -240,7 +240,7 @@ class ExerciseSheet1 {
 
         //
 
-        // 16.Write a program in Python to calculate and print the Electricity bill of a given customer. The customer id., name and unit consumed by the user should be taken from the keyboard and display the total amount to pay to the customer. The charge are as follow :
+        // 16.Write a program in Python/Java to calculate and print the Electricity bill of a given customer. The customer id., name and unit consumed by the user should be taken from the keyboard and display the total amount to pay to the customer. The charge are as follow :
 
 // Unit	                                             Charge/unit
 // upto 199	                                                          @1.20
@@ -273,7 +273,7 @@ class ExerciseSheet1 {
 // }
 
 
-//17.Write a program in Python to accept a grade and declare the equivalent description :
+//17.Write a program in Python/Java to accept a grade and declare the equivalent description :
 
 // Grade	Description
 // E	Excellent      
