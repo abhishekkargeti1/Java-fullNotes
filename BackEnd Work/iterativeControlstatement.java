@@ -1,4 +1,3 @@
-import java.util.*;
 class iterativeControlstatement {
     public static void main(String []args){
         // 4 types of loop in  java
