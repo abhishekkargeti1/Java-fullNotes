@@ -155,6 +155,25 @@ public class ExerciseSheet2 {
     
     // Scanner sc = new Scanner(System.in);
     // int number = sc.nextInt();
+    // int temp1,count=0;
+    // int temp = number;
+    // temp1 = number;
+    // int reminder;
+    // int sum=0;
+    // while(temp1>0){
+    //     count++;
+    //     temp1 = temp1/10;
+    // }
+    // while(temp>0){
+    //     reminder = temp%10;
+    //     sum +=(int)Math.pow(reminder,count);
+    //     temp /=10;
+    // }
+    // if(sum == number){
+    //     System.out.println("Number is Armstrong");   
+    // }else{
+    //     System.out.println("Number is not Aranstrong");
+    // }
     
     
 

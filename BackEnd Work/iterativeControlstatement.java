@@ -42,6 +42,30 @@ class iterativeControlstatement {
 
 
         //2. while loop     
+        // we use while when we don't know numbeer iteration
+
+                    //syntax
+
+                    // intialization
+                    //  while(condition){
+                        // # code to be executed when condition is true.
+                        // increment/decrement
+                    // }
+                 //example
+                 
+                 int i=1;
+                 while(i<=5){
+                    System.out.println(i);
+                    i++;
+                 }
+
+                //  a Infinite while loop
+                // syntax
+                
+                // while(true){
+                //     System.out.println("hello");
+                // }
+
         //3. do while loop
         //4. for each loop
         
