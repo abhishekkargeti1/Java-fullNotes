@@ -3,5 +3,6 @@
 
 Control Statement  
 Loops
+Star Patterns 
 
 Exercise Sheets of above topic with answer.
