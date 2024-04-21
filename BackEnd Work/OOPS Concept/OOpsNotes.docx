@@ -1,0 +1,56 @@
+
+
+                                           OOPS (Object Oriented Programming System)
+                                                 Features with its Defination
+                
+                
+                 1. Inheritance (Reuseablity).
+                
+                
+                 2. Polymorphism (One name many forms).
+                
+                
+                 3. Encaptulation (Blinding data menber and menber function in single unit)||(Data hiding).
+                
+                
+                 4. Abstraction (Show functionality only hide complexity).
+                
+                
+                 5. Object (Anything in this real world is know as an Object)&&(Any thing in this Real world is known as Object ),(Physically Exist).
+                Ex Pen,Makers ,Laptop etc.
+                Object(Real World)                                  Object(Computer)
+                 -> Properties(State)                               Data member(Instance Variable)
+
+                 ->Behaviour                                        Member function(Method)
+                
+                 Data Member                                            Member Function
+                 1. Non static                                          Non static                 
+                 2. Static                                              Static
+
+                 Rule  :-   non static things is always belongs to Object .
+                 Rule  :-   Static thing always belongs to class.
+                
+                 6. Class (Defination of the object is class).    
+                    Defination of class :-  class is a collection of similar type of objects .(logical Entity).
+                    class is Template or blueprint of Objects.
+
+                    Ex :- class<class Name>
+                    {
+                        Field 
+                        Method
+                        constructor
+                        block
+                        nested class
+                    }
+        In java there are 4 ways to initialize Instance Variable
+        -> By Reference
+        -> By Method
+        -> By constructor
+        -> By Init Block (Instance initialize Block).
+
+        5 many ways to create object in java 
+        -> By new Keyword 
+        -> By Factory Method
+        -> By newInstance() Method
+        ->By clone () method
+        -> By Deserialization 
