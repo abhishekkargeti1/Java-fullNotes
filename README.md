@@ -1,8 +1,8 @@
 # Java Notes with Syntax 
 # Folders are made according to the topics for better understanding
-
-Control Statement  
-Loops  <br>
-Star Patterns <br>
-OOPS Notes Added <br>
-Exercise Sheets of above topic with answer.
+ol{
+<li>Control Statement</li> 
+<li>Loops </li> 
+<li>Star Patterns</li> 
+<li>OOPS Notes Added </li>
+<li>Exercise Sheets of above topic with answer.</li>
