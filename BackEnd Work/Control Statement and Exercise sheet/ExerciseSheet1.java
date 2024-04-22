@@ -284,30 +284,109 @@ class ExerciseSheet1 {
 
 //Answer
 
+// Scanner sc = new Scanner(System.in);
+// char Input= sc.next().charAt(0);
+// char userInput= Character.toUpperCase(Input);
+// switch (userInput) {
+//     case 'A':
+//     System.out.println("Average");
+//     break;
+//     case 'E':
+//     System.out.println("Excellent");
+//     break;
+//     case 'V':
+//     System.out.println("Very Good");
+//     break;
+//     case 'G':
+//     System.out.println("Good");
+//     break;
+//     case 'F':
+//     System.out.println("Fail");
+//     break;
+//     default:
+//     System.out.println("Invaild Input");
+//         break;
+//     }
+//     sc.close();
+
+// 18.Write a program in Python/Java to read any day number in integer and display day name in the word.
+
+// Scanner sc = new Scanner(System.in);
+// System.out.println("Enter Number ");
+// int userInput = sc.nextInt();
+// switch (userInput) {
+//     case 1:
+//         System.out.println("Monday");
+//         break;
+//     case 2:
+//         System.out.println("Tuesday");
+//         break;
+//     case 3:
+//         System.out.println("Wednesday");
+//         break;
+//     case 4:
+//         System.out.println("Thusday");
+//         break;
+//     case 5:
+//         System.out.println("Friday");
+//         break;
+//     case 6:
+//         System.out.println("Saturday");
+//         break;
+//     case 7:
+//         System.out.println("Sunday");
+//         break;   
+//     default:
+//     System.out.println("Invalid UserInput");
+//         break;
+// }
+
+// 19.Write a program in Python/Java to read any Month Number in integer and display Month name in the word.
+
 Scanner sc = new Scanner(System.in);
-char Input= sc.next().charAt(0);
-char userInput= Character.toUpperCase(Input);
+System.out.println("Enter Number");
+int userInput = sc.nextInt();
 switch (userInput) {
-    case 'A':
-    System.out.println("Average");
+    case 1:
+        System.out.println("January");
+        break;
+    case 2:
+    System.out.println("February");
+        break;
+    case 3:
+    System.out.println("March");
     break;
-    case 'E':
-    System.out.println("Excellent");
+    case 4:
+    System.out.println("April");
     break;
-    case 'V':
-    System.out.println("Very Good");
+    case 5:
+    System.out.println("May");
     break;
-    case 'G':
-    System.out.println("Good");
+    case 6:
+    System.out.println("June");
     break;
-    case 'F':
-    System.out.println("Fail");
+    case 7:
+    System.out.println("July");
+    break;
+    case 8:
+    System.out.println("Augest");
+    break;
+    case 9:
+    System.out.println("September");
+    break;
+    case 10:
+    System.out.println("October");
+    break;
+    case 11:
+    System.out.println("November");
+    break;
+    case 12: 
+    System.out.println("December");
     break;
     default:
-    System.out.println("Invaild Input");
+    System.out.println("Invaild userInput");
         break;
-    }
-    sc.close();
+}
 
 
 
