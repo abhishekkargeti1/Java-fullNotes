@@ -343,50 +343,52 @@ class ExerciseSheet1 {
 
 // 19.Write a program in Python/Java to read any Month Number in integer and display Month name in the word.
 
-Scanner sc = new Scanner(System.in);
-System.out.println("Enter Number");
-int userInput = sc.nextInt();
-switch (userInput) {
-    case 1:
-        System.out.println("January");
-        break;
-    case 2:
-    System.out.println("February");
-        break;
-    case 3:
-    System.out.println("March");
-    break;
-    case 4:
-    System.out.println("April");
-    break;
-    case 5:
-    System.out.println("May");
-    break;
-    case 6:
-    System.out.println("June");
-    break;
-    case 7:
-    System.out.println("July");
-    break;
-    case 8:
-    System.out.println("Augest");
-    break;
-    case 9:
-    System.out.println("September");
-    break;
-    case 10:
-    System.out.println("October");
-    break;
-    case 11:
-    System.out.println("November");
-    break;
-    case 12: 
-    System.out.println("December");
-    break;
-    default:
-    System.out.println("Invaild userInput");
-        break;
-}
+// Scanner sc = new Scanner(System.in);
+// System.out.println("Enter Number");
+// int userInput = sc.nextInt();
+// switch (userInput) {
+//     case 1:
+//         System.out.println("January");
+//         break;
+//     case 2:
+//     System.out.println("February");
+//         break;
+//     case 3:
+//     System.out.println("March");
+//     break;
+//     case 4:
+//     System.out.println("April");
+//     break;
+//     case 5:
+//     System.out.println("May");
+//     break;
+//     case 6:
+//     System.out.println("June");
+//     break;
+//     case 7:
+//     System.out.println("July");
+//     break;
+//     case 8:
+//     System.out.println("Augest");
+//     break;
+//     case 9:
+//     System.out.println("September");
+//     break;
+//     case 10:
+//     System.out.println("October");
+//     break;
+//     case 11:
+//     System.out.println("November");
+//     break;
+//     case 12: 
+//     System.out.println("December");
+//     break;
+//     default:
+//     System.out.println("Invaild userInput");
+//         break;
+// }
+
+// 20.Write a program in Python/Java to read any Month Number in integer and display the number of days for this month.
 
 
 
