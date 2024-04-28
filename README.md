@@ -1,5 +1,5 @@
 # Java Notes with Syntax 
-Folders are made according to the topics for better understanding
+Folders are made according to the topics for better understanding <br>
  Notes are getting update day by day . Please wait for next update .
 <ol>
 <li>Control Statement</li> 
