@@ -1,4 +1,4 @@
-import java.util.*;
+// import java.util.*;
 class ExerciseSheet1 {
     public static void main(String[] args) {
       // 1.Write a Python/Java program to accept two integers and check whether they are equal or not.
