@@ -23,5 +23,10 @@ class Oppspratical {
         System.out.println("Fuel Tank Capacity :- "+c1.carFuelTank);
         System.out.println("Seating Capacity :- "+c1.carSeatingCapacity);
 
+
+        
+
+
+
     }    
 }

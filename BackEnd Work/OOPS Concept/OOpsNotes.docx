@@ -52,3 +52,63 @@
         -> By newInstance() Method
         ->By clone () method
         -> By Deserialization 
+
+Anonymous object :-
+            It means nameless .. An object which has no Reference is know asan Anonymous object . It can be used at the run time of object creation only.
+
+            syntax :-
+             new temp(); Anonymous object
+            calling method through Anonymous object
+            new temp().setData();
+
+
+    Example :-
+
+    class anonymousObject {
+    String penBrand;
+    String penColor;
+    String penInkcolor;
+    double penPrice;
+    void setData(String brand ,String color,String inkColor , double price){
+        penBrand = brand;
+        penColor = color;
+        penInkcolor = inkColor;
+        penPrice = price;
+        displayData();
+    }
+    void displayData(){
+        System.out.println("Brand "+ penBrand);
+        System.out.println("Color "+ penColor);
+        System.out.println("Ink Color "+ penInkcolor);
+        System.out.println("Price "+ penPrice);
+    }
+    public static void main(String[] args) { 
+        new anonymousObject().setData("uni-ball","Red","Black",2000.00);
+    }    
+}
+
+Creation of object of one type only in single line 
+
+    class test {
+        String micName;
+        int price;
+        void setData(String name,int micPrice){
+            micName = name;
+            price = micPrice;
+        }
+        void displayData(){
+            System.out.println("Mic name is "+ micName); 
+            System.out.println("Mic price is "+ price); 
+        }
+        public static void main(String []args){
+            test t1 = new test(),t2= new test(),t3 = new test();  // Creation of object of one type only in single line 
+        }
+    }
+
+    this Keyword in java :-
+
+    In Java this is a Reference Variable that holds Reference id of current object Reference id .(Object)
+
+
+OOPS 1 :-
+Rule 1 :- whenever class level Variable (Instance Variable)and local Variable both are having same name then this concept is know as Data shodowing
