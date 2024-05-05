@@ -109,6 +109,124 @@ Creation of object of one type only in single line
 
     In Java this is a Reference Variable that holds Reference id of current object Reference id .(Object)
 
+    class pratice {
+    int id ;
+    String Name ;
+    String Profile;
+    void setData(int id, String Name,String Profile){
+        this.id = id;
+        this.Name = Name;
+        this.Profile = Profile;
+
+    }
+    void displayData(){
+        System.out.println("Id "+id);
+        System.out.println("Name "+Name);
+        System.out.println("Profile "+Profile);
+    }
+    public static void main(String []args){
+        pratice p1 = new pratice();
+        p1.setData(1001,"Abhi","Java Dev");
+        p1.displayData();
+    }
+}
+
+    this to invoke current class method (Non - Static). 
+    this () to invoke current class constructor (constructor chaining). It is used to reuse the constructor . this must be the first statement in constructor.
+
+    this : - to pass as argument in the constructor call.
+
+    this Keyword can be use to return current class Instance.
+
+   class test{
+    test fun1(){
+        System.out.println("I am fun1");
+        return this;
+    }
+    test fun2(){
+        System.out.println("I am fun2");
+        return this;
+    }
+    test fun3(){
+        System.out.println("I am fun3");
+        return this;
+    }
+    test fun4(){
+        System.out.println("I am fun4");
+        return this;
+    }
+    void fun5(){
+        System.out.println("I am fun5");
+    }
+    public static void main(String []args){
+        new test().fun1().fun2().fun3().fun4().fun5();
+    }
+}
+
+
+    this :- to pass as an argument in the method.
+
+    class test{
+        void show (test t){
+            System.out.println("Hello I am Show");
+        }
+        void display(){
+            System.out.println("Hello I am Display");
+            show(this);
+        }
+        public static void main(String []args){
+            test t = new test();
+            t.display();
+        }
+    }
+
+
+
+    Example :-
+
+    public class This {
+    int bookId;
+    String bookName;
+    String bookAuthor;
+    double bookPrice;
+    
+    void insertData(int bookId,String bookName,String bookAuthor,double bookPrice){
+        this.bookId = bookId;
+        this.bookName = bookName;
+        this.bookAuthor = bookAuthor;
+        this.bookPrice = bookPrice;
+        // display(); // compiler automatically add this .
+        this.display(); 
+    }
+    void display(){
+        System.out.println("Book_Id "+bookId);
+        System.out.println("Book_Name "+bookName);
+        System.out.println("Book_Author "+bookAuthor);
+        System.out.println("Book_Price "+bookPrice);
+    }
+    public static void main(String []args){
+            This t1 = new This();
+            t1.insertData(101, "Java" , "XYZ", 800);
+    }
+    
+}
+
+What is this Keyword stores ?
+
+class test{
+    void display(){
+        System.out.println(this);
+    }
+    public static void main(String []args){
+        test t1 = new test();
+        System.out.println(t1);
+        t1.display();
+    }
+}
+
+
 
 OOPS 1 :-
-Rule 1 :- whenever class level Variable (Instance Variable)and local Variable both are having same name then this concept is know as Data shodowing
+Rule 1 :- whenever class level Variable (Instance Variable)and local Variable both are having same name then this concept is know as Data shodowing.
+
+
