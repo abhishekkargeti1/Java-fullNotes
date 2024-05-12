@@ -229,4 +229,136 @@ class test{
 OOPS 1 :-
 Rule 1 :- whenever class level Variable (Instance Variable)and local Variable both are having same name then this concept is know as Data shodowing.
 
+Constructor in java.
 
+Constructor is a block of codes similar to the method. it is called whaen Instance of the class is created. At the time of calling constructor, mermory for the object is allocated in the mermory.
+
+Every time an object is created using the new Keyword at least one constructor is called.
+
+Rules :-
+
+1. Constructor name must be same as its class.
+2. A constructor must have no explicit return type.
+
+Two types of constructor
+
+1.  Non argument constructor
+2. argument constructor /Parametrized Constructor .
+
+
+Example of Non argument Constructor
+
+class Test{
+    test(){
+        System.out.println("Default Constructor");
+    }
+}
+
+Parametrized Constructor Example
+
+class Test{
+    test(int x , int y){
+        System.out.println("DParametrized Constructor");
+    }
+}
+
+
+
+Prove that compiler run automatically constructor on the object creation.
+
+class test{
+    public static void main(String []args){
+        System.out.println("Hello world");
+    }
+}
+
+use javap on command line.
+
+Default constructor is used to provide the Default values to the object like 0 , null.
+
+
+Java Parametrized Constructor
+
+A constructor which has specific number of Parametrized is called a Parametrized Constructor.
+
+class student {
+    int stuId;
+    String stuName;
+    String stuCourse;
+    student(int stuId,String stuName,String stuCourse){
+        this.stuId=stuId;
+        this.stuName=stuName;
+        this.stuCourse=stuCourse;
+    }
+    void display(){
+        System.out.println( stuId +" "+stuName+" "+stuCourse);
+    }
+    public static void main(String []args){
+        student s1 = new student(101,"Abhishek","BCA");
+        s1.display();
+    }
+}
+
+
+Constructor OverLoading -:
+
+class RegistrationForm{  
+    String name;  
+    String email;  
+    String password;  
+    long phone_number;  
+    String gender;  
+    String language;  
+    int zip_code;  
+    String about;   
+    RegistrationForm(String name,String email,String password,long phone_number,String gender,String language,int zip_code){    
+        this.name=name;    
+        this.email=email;    
+        this.password=password;    
+        this.phone_number=phone_number;    
+        this.gender=gender;    
+        this.language=language;    
+        this.zip_code=zip_code;    
+        System.out.println("Name: "+name);    
+        System.out.println("Email: "+email);    
+        System.out.println("Password: "+password);    
+        System.out.println("Phone Number: "+phone_number);    
+        System.out.println("Gender: "+gender);    
+        System.out.println("Language: "+language);    
+        System.out.println("Zip Code: "+zip_code);    
+        System.out.println();  \
+        }    
+        RegistrationForm(String name,String email,String password,long phone_number,String gender,String language,int zip_code,String about)
+        {    
+        this.name=name;    
+        this.email=email;    
+        this.password=password;    
+        this.phone_number=phone_number;    
+        this.gender=gender;    
+        this.language=language;    
+        this.zip_code=zip_code;    
+        this.about=about;        
+        System.out.println("Name: "+name);    
+        System.out.println("Email: "+email);    
+        System.out.println("Password: "+password);    
+        System.out.println("Phone Number: "+phone_number);    
+        System.out.println("Gender: "+gender);    
+        System.out.println("Language: "+language);    
+        System.out.println("Zip Code: "+zip_code);    
+        System.out.println("About   : "+about);  
+        }    
+        RegistrationForm()  {    
+            System.out.println("Name: "+name);    
+            System.out.println("Email: "+email);   
+            System.out.println("Password: "+password);    
+            System.out.println("Phone Number: "+phone_number);    
+            System.out.println("Gender: "+gender);    
+            System.out.println("Language: "+language);    
+            System.out.println("Zip Code: "+zip_code);    
+            System.out.println("About   : "+about);      
+            }    
+            public static void main(String[] args)  {    
+                RegistrationForm r1 = new RegistrationForm("Amit","Amit@gmail.com","Hello@123",9354474625l,"Male","English",110043);        RegistrationForm r2 = new RegistrationForm("Ajay","Ajay@gmail.com","Ajay@123",9354474625l,"Male","English",110043,"Hello Hi I am Java pro Programmer ");
+                RegistrationForm r3 = new RegistrationForm();  
+                }
+    }
