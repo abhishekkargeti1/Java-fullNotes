@@ -362,3 +362,137 @@ class RegistrationForm{ 
                 RegistrationForm r3 = new RegistrationForm();  
                 }
     }
+
+Difference between constructor and method.
+
+Constructor                                                     Method
+A constructor is used to initialize                             A method is used to exose the Behaviour of an object.
+to state of object.                                             A method must have a return type.
+The constructor must have no return type.
+The constructor is invoke implicitly.                           The method is invoke explicitly.
+
+
+We can make class name method is java .
+
+Here is the Example:-
+
+
+class Constructor {
+    int bookId;
+    String bookName;
+    String bookAuthor;
+    double bookPrice;
+    
+    Constructor(int bookId,String bookName,String bookAuthor,double bookPrice){
+        this.bookId= bookId;
+        this.bookAuthor=bookAuthor;
+        this.bookName=bookName;
+        this.bookPrice=bookPrice;
+        Constructor();
+    }
+    void Constructor(){
+        System.out.println("BookId "+ bookId);
+        System.out.println("BookAuthor "+ bookAuthor);
+        System.out.println("BookName "+ bookName);
+        System.out.println("BookPrice "+ bookPrice);
+    }
+    public static void main(String []args){
+        Constructor c1 = new Constructor(101,"Java","Abhishek",800);
+    }
+    
+}
+
+Java copy Constructor 
+
+There is no copy constructor in java . However we can copy the values from one object to another object.
+
+
+class Constructor {
+   String name;
+   int age;
+   String course;
+   Constructor(String name,int age ,String course){
+    this.name= name;
+    this.age=age;
+    this.course=course;
+   }
+   Constructor(Constructor c1){
+    name = c1.name;
+    age = c1.age;
+    course = c1.course;
+   }
+   void display(){
+    System.out.println(name+" "+age+" "+course);
+   }
+
+    public static void main(String []args){
+        Constructor c1 = new Constructor("Abhishek",22,"BCA");
+        Constructor c2 = new Constructor(c1);
+        c1.display();
+        c2.display();
+    }
+    
+}
+
+
+Copy one object value into another by Reference.
+
+class pratice{
+    String name ;
+    String brand;
+    String price;
+    public static void main(String []args){
+        pratice p1 = new pratice();
+        p1.name ="Abhishek";
+        p1.brand="Iphone";
+        p1.price="12000";
+        System.out.println(p1.name+" "+p1.brand+" "+p1.price);
+        pratice p2 = new pratice();
+        p2=p1;
+        System.out.println(p2.name+" "+p2.brand+" "+p2.price);
+    }
+}
+
+
+Does constructor return any value ?
+
+Yes ,it the current class Instance (You cannot use return type yet it returns a value ).
+
+Can constructor perfrom other task instead of  initialization?
+
+yes like a object creation , starting a thread , calling a method etc. 
+
+Is there Constructor class in java?
+
+yes, java.lang.reflect.Constructor.
+
+
+Constructor Channing :-
+
+this () : to invoke current class constructor (Constructor Chaining ).
+
+Rule :- this() must be first line in constructor.
+
+Rule ;- create one constructor without using this () as function to break the chain.
+
+
+class temp {
+        temp(){
+            System.out.println("Default Constructor");
+        }   
+        temp(int x){
+            this();//this must be in first line.
+            System.out.println(x);
+        } 
+        temp(int x,int y){
+            this(100);//this must be in first line.
+            System.out.println(x+y);
+        } 
+        temp(int x,int y,int z){
+            this(100,200);//this must be in first line.
+            System.out.println(x+y+z);
+        } 
+        public static void main(String []args){
+            new temp(100,200,300);
+        }
+}
