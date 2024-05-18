@@ -473,7 +473,7 @@ this () : to invoke current class constructor (Constructor Chaining ).
 
 Rule :- this() must be first line in constructor.
 
-Rule ;- create one constructor without using this () as function to break the chain.
+Rule :- create one constructor without using this () as function to break the chain.
 
 
 class temp {
@@ -496,3 +496,153 @@ class temp {
             new temp(100,200,300);
         }
 }
+
+Instance Initializer Block(Init Block) :-
+
+Init block does not have any name 
+init block output will print before constructor.
+using init block we can initialize Instance data member.
+
+class initBlock{
+    initBlock(){
+        System.out.println("hello i am constructor ");
+    }
+    {
+        System.out.println("hello Init block");
+    }
+    initBlock(int x){
+        System.out.println(x);
+    }
+    public static void main(String []args){
+            initBlock i1 = new  initBlock();
+            initBlock i2 = new  initBlock();
+
+    }
+}
+
+
+Java static keyword :-
+
+It use to memory mainly. we can apply static keyword with variable,method ,blocks and nested classes.The static keyword belongs to class than an Instance of the class.
+
+the static can be :
+
+variable
+Method 
+Block 
+Nested class
+
+Advantage of static variable
+
+It make your program memory efficent (i.e , it saves memory).
+
+Example :-
+
+class staticKeyword {
+    static String compName ="Hcl";
+    int empId;
+    String empName;
+    String empDesignation;
+
+    staticKeyword(int empId,String empName,String empDesignatioString){
+        this.empId=empId;
+        this.empName=empName;
+        this.empDesignation=empDesignatioString;
+    }
+    void display(){
+        System.out.println("Company name "+compName);
+        System.out.println("Employe name "+empName);
+        System.out.println("Employe Id "+empId);
+        System.out.println("Employe Designation "+empDesignation);
+    }
+    public static void main(String []args){
+        staticKeyword s1 = new staticKeyword(1, "Abhishek", "Java dev");
+        s1.display();
+        staticKeyword s2 = new staticKeyword(2, "Abhi", "Python dev");
+        s2.display();
+    }
+}
+
+
+class pratice{
+   int x ;
+   pratice(){
+    System.out.println(x);
+    x++;
+   }
+    public static void main(String[] args) {
+        pratice p1 =new pratice();
+        pratice p2 =new pratice();
+        pratice p3 =new pratice();
+        pratice p4 =new pratice();
+        pratice p5 =new pratice();
+
+    } 
+}
+
+Answer is 0 . 
+
+static method in java :-
+
+A static method belongs to class rather than object.
+A static method can be invoked without the need for creating on Instance of a class.
+A static method can accesss static data member can change the value of it.
+
+Example :-
+
+class staticKeyword {
+    static String compName ="Hcl";
+    int empId;
+    String empName;
+    String empDesignation;
+
+    staticKeyword(int empId,String empName,String empDesignatioString){
+        this.empId=empId;
+        this.empName=empName;
+        this.empDesignation=empDesignatioString;
+    }
+    static void changeCompanyName(){
+        compName="TCS";
+    }
+    void display(){
+        System.out.println("Company name "+compName);
+        System.out.println("Employe name "+empName);
+        System.out.println("Employe Id "+empId);
+        System.out.println("Employe Designation "+empDesignation);
+    }
+    public static void main(String []args){
+        staticKeyword s1 = new staticKeyword(1, "Abhishek", "Java dev");
+        s1.display();
+        staticKeyword s2 = new staticKeyword(2, "Abhi", "Python dev");
+        s2.display();
+        changeCompanyName();
+        staticKeyword s3 = new staticKeyword(3, "Simran", "javascript dev");
+        s3.display();
+    }
+}
+
+Q1 Why is the Java main method static?
+
+Ans It is because the object is not required to call a static method. If it were a non-static method, JVM creates an object first then call main() method that will lead the problem of extra memory allocation.
+
+3 Java static block:-
+--------------------------------
+
+Q2 Can we execute a program without main() method?
+
+Ans No, one of the ways was the static block, but it was possible till JDK 1.6. Since JDK 1.7, it is not possible to execute a Java class without the main method.
+
+Is used to initialize the static data member.
+ 
+class test{
+    static 
+    {
+        System.out.println("Hello i am static");
+    }
+    public static void main(String []args){
+        System.out.println("Hello i am Main ");
+    }
+}
+
+
+
