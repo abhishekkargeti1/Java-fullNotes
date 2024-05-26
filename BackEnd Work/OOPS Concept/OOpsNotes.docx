@@ -644,5 +644,231 @@ class test{
     }
 }
 
+Inheritance in Java
+-------------------------------
+
+Inheritance in Java is a mechanism in which one object acquires all the properties and behaviors of a parent object. 
+
+The idea behind inheritance in Java is that you can create new classes that are built upon existing classes. When you inherit from an existing class, you can reuse methods and fields of the parent class. Moreover, you can add new methods and fields in your current class also.
 
 
+Inheritance represents the IS-A relationship which is also known as a parent-child relationship.
+
+Why use inheritance in java:-
+--------------------------------------------
+For Code Reusability.
+
+For Method Overriding (so runtime polymorphism can be achieved).
+
+
+Terms used in Inheritance:
+-----------------------------------------
+
+Class: A class is a group of objects which have common properties. It is a template or blueprint from which objects are created.
+
+Sub Class/Child Class: Subclass is a class which inherits the other class. It is also called a derived class, extended class, or child class.
+
+Super Class/Parent Class: Superclass is the class from where a subclass inherits the features. It is also called a base class or a parent class.
+
+Reusability: As the name specifies, reusability is a mechanism which facilitates you to reuse the fields and methods of the existing class when you create a new class. You can use the same fields and methods already defined in the previous class.
+
+
+The syntax of Java Inheritance:-
+---------------------------------------------
+
+//Syntax:-
+
+class Parent
+{
+  
+}
+class Child extends Parent //IS A Relationship
+{
+  
+}
+
+
+
+The extends keyword indicates that you are making a new class that derives from an existing class. The meaning of "extends" is to increase the functionality.
+
+In the terminology of Java, a class which is inherited is called a parent or superclass, and the new class is called child or subclass.
+
+
+Rule:- 
+  By Default All the Datamember and member function of Parent Class are available in Child Class.but they are not Private.
+
+
+Rule: -   In case of Inhertinace Child Class Object is always created..
+
+Example :-
+
+class inheritance {
+    int x;
+    int y;
+    void show(){
+        System.out.println(x);
+        System.out.println(y);
+    }
+}
+class derived extends inheritance{
+    void get(int x , int y){
+        this.x=x;
+        this.y=y;
+        // show();
+    }
+    public static void main(String[] args) {
+        derived d1 = new derived();
+        d1.get(100,200);
+        d1.show();
+    }
+}
+
+Types in inheritance
+
+On the bases of class there are 3 types of inheritance exist.
+
+1 Single inheritance.
+2 Multi level inheritance.
+3 hierarchical inheritance.
+
+1. Single inheritance :-
+
+        When we have one class and only one child that is called single level inheritance.
+
+Example :-
+
+class inheritance {
+    int x;
+    int y;
+    void show(){
+        System.out.println(x);
+        System.out.println(y);
+    }
+}
+class derived extends inheritance{
+    void get(int x , int y){
+        this.x=x;
+        this.y=y;
+        // show();
+    }
+    public static void main(String[] args) {
+        derived d1 = new derived();
+        d1.get(100,200);
+        d1.show();
+    }
+}
+
+2. Multi level inheritance :-
+
+
+        When we have one parent ,one child and one subchild. this is class Multi level inheritance.
+
+Example :- 
+
+class Employee
+{
+  int empId;
+  String empName;
+  String empDesignation;
+}
+class ProjectManager extends Employee
+{
+  double hra;
+  double da;
+}
+class Programmer extends ProjectManager
+{
+  
+  Programmer(int empId,String empName,String empDesignation,double hra,double da)
+  {
+    this.empId = empId;
+    this.empName = empName;
+    this.empDesignation = empDesignation;
+    this.hra = hra;
+    this.da = da;
+  }
+  
+  void displayData()
+  {
+    System.out.println(empId+" "+empName+" "+empDesignation+" "+hra+" "+da);
+  }
+  
+  public static void main(String[] args)
+  {
+    Programmer p1 = new Programmer(101,"Sachin","Java Developer",4500,2000);
+    p1.displayData();
+    Programmer p2 = new Programmer(102,"Amit","Python Developer",4000,2500);
+    p2.displayData();
+    Programmer p3 = new Programmer(103,"Vijay",".Net Developer",3500,300);
+    p3.displayData();
+    
+  }
+}
+
+
+Hierarchical inheritance 
+
+    When one class have Multiple derived classs this called hierarchical inheritance.
+
+    Example :-
+
+        class Car
+{
+  String brand;
+  String name;
+  String price;
+  String seatingCapacity;
+  String fuelTank;
+  
+  void show()
+  {
+    System.out.println(brand+" "+name+" "+price+" "+seatingCapacity+" "+fuelTank);
+  }
+  
+}
+class Thar extends Car
+{
+  Thar(String brand,String name,String price,String seatingCapacity,String fuelTank)
+  {
+    this.brand=brand;
+    this.name=name;
+    this.price=price;
+    this.seatingCapacity=seatingCapacity;
+    this.fuelTank=fuelTank;
+  }
+}
+class Scorpio extends Car
+{
+  Scorpio(String brand,String name,String price,String seatingCapacity,String fuelTank)
+  {
+    this.brand=brand;
+    this.name=name;
+    this.price=price;
+    this.seatingCapacity=seatingCapacity;
+    this.fuelTank=fuelTank;
+  }
+}
+class XUV7oo extends Car
+{
+  XUV7oo(String brand,String name,String price,String seatingCapacity,String fuelTank)
+  {
+    this.brand=brand;
+    this.name=name;
+    this.price=price;
+    this.seatingCapacity=seatingCapacity;
+    this.fuelTank=fuelTank;
+  }
+  
+}
+class TestInteritance
+{
+  public static void main(String[] args)
+  {
+    Thar t1 = new Thar("Mahindra","Thar","15.67lacs","4 Seater","56 Liters");
+    Scorpio s1 = new Scorpio("Mahindra","Scorpio","23.67lacs","7 Seater","60 Liters");
+    XUV7oo x1 = new XUV7oo("Mahindra","XUV7oo",".67lacs","7 Seater","60 Liters");
+    t1.show();
+    s1.show();
+    x1.show();
+  }
+} 
