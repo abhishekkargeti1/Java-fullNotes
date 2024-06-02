@@ -1,0 +1,21 @@
+Multi dimensional array :-
+
+It is also called Arrays of Arrays.
+It representation of matrix.'
+It is also called 2D array
+
+syntax :-
+
+        int arr[][] = new int[3][3];
+        first [] represent row.
+        second [] represent coloumn.
+
+To access/ insert element is 2D array :-
+        arr[0][0] =10;
+        arr[0][1] =20;
+        arr[0][2] =30;
+
+To calculate the size of an array :-
+
+    formula :- (i*j)*size of the element.
+ 
