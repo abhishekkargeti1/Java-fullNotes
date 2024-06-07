@@ -18,4 +18,88 @@ To access/ insert element is 2D array :-
 To calculate the size of an array :-
 
     formula :- (i*j)*size of the element.
- 
+
+
+Array pass as an argument 
+
+class example {
+
+    static void printArray(int arr[]){
+        for(int value :arr){
+            System.out.println(value +" ");
+        }
+    }
+    public static void main(String []args){
+        // Annonyamous array
+        printArray(new int []{12,23,4,5,6,7});
+    }    
+}
+
+
+How to return  array 
+
+class example2 {
+    static String [] returnArrays(){
+        return new String[]{"Ajay","Abhsihek","Divesh","Simran"};
+    }
+    public static void main(String []args){
+        String [] returnArray = returnArrays();
+        for(String value :returnArray){
+            System.out.println(value+" ");
+        }
+
+    }
+    
+}
+
+Poxy class :-
+
+class example3 {
+    public static void main(String[] args) {
+        int arr[] = new int[5];
+        System.out.println(arr.getClass().getName());
+
+        float arr3[][] = new float[5][5];
+        System.out.println(arr3.getClass().getName());
+
+        String arr2[][] = new String[3][3];
+        System.out.println(arr2.getClass().getName());
+
+        long arr4[][] = new long[3][3];
+        System.out.println(arr4.getClass().getName());
+    }
+}
+
+Jagged Array 
+
+It is an array of arrays where each element is, in turn, an array. A special feature of this type of array is that it is a Multidimensional array whose each element can have different sizes.
+
+For Example, a two-dimensional array in Java is an array of single dimension array. In the case of a two-dimensional array, each one-dimensional array will have different columns.
+
+
+ int arr[][] = new int[2][];
+    
+    arr[0] = new int[3];
+    arr[1] = new int[2];
+    
+    int count = 0;
+    
+    for(int i=0 ; i<arr.length ; i++)
+    {
+      for(int j=0 ; j<arr[i].length ; j++)
+      {
+        arr[i][j] = count++;
+      }
+    }
+    
+    System.out.println("Contents of 2D Jagged Array");
+    
+    for(int j=0 ; j<arr.length ; j++)
+    {
+      for(int i=0 ; i<arr[j].length ; i++)
+      {
+        System.out.print(arr[j][i]+" ");
+      }
+      
+      System.out.println();
+    }

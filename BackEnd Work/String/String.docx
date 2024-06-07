@@ -1,0 +1,762 @@
+Introduction to Java String Handling
+
+String is an object that represents sequence of characters. In Java, String is represented by String class which is located into java.lang package
+
+It is probably the most commonly used class in java library. In java, every string that we create is actually an object of type String. One important thing to notice about string object is that string objects are immutable that means once a string object is created it cannot be changed.
+
+The Java String class implements Serializable, Comparable and CharSequence interface that we have represented using the below image.
+
+
+In Java, CharSequence Interface is used for representing a sequence of characters. CharSequence interface is implemented by String, StringBuffer and StringBuilder classes. This three classes can be used for creating strings in java.
+
+
+What is an Immutable object?
+
+An object whose state cannot be changed after it is created is known as an Immutable object. String, Integer, Byte, Short, Float, Double and all other wrapper classes objects are immutable.
+
+Creating a String object
+String can be created in number of ways, here are a few ways of creating string object.
+
+1 Using a String literal
+String literal is a simple string enclosed in double quotes " ". A string literal is treated as a String object.
+
+public class Demo
+{    
+    public static void main(String[] args) 
+{  
+    	String s1 = "Hello Java";//String Literal
+    	System.out.println(s1);
+    }  
+}  
+
+2 Using new Keyword
+We can create a new string object by using new operator that allocates memory for the object.
+
+public class Demo
+{    
+    public static void main(String[] args) 
+{  
+    	String s1 = new String("Hello Java");
+    	System.out.println(s1);
+    }  
+}  
+Each time we create a String literal, the JVM checks the string pool first. If the string literal already exists in the pool, a reference to the pool instance is returned. If string does not exist in the pool, a new string object is created, and is placed in the pool. String objects are stored in a special memory area known as string constant pool inside the heap memory.
+
+String object and How they are stored
+When we create a new string object using string literal, that string literal is added to the string pool, if it is not present there already.
+
+String str= "Hello"; //String literal
+
+And, when we create another object with same string, then a reference of the string literal already present in string pool is returned.
+
+
+But if we change the new string, its reference gets modified.
+str2=str2.concat("world");
+
+Concatenating String
+
+There are 2 methods to concatenate two or more string.
+
+Using concat() method
+
+Using + operator
+
+•	Using concat() method
+
+Concat() method is used to add two or more string into a single string object. It is string class method and returns a string object.
+
+public class Demo
+{    
+	
+    public static void main(String[] args)
+ {  
+    	String s = "Hello";
+    	String str = "Java";
+    	String str1 = s.concat(str);
+    	System.out.println(str1);
+    }  
+}  
+
+2) Using + operator
+
+Java uses "+" operator to concatenate two string objects into single one. It can also concatenate numeric value with string object. See the below example.
+public class Demo
+{    
+    public static void main(String[] args) 
+{  
+    	String s = "Hello";
+    	String str = "Java";
+    	String str1 = s+str;
+    	String str2 = "Java"+11;
+    	System.out.println(str1);
+    	System.out.println(str2);
+    }  
+}  
+
+String Comparison
+
+To compare string objects, Java provides methods and operators both. So we can compare string in following three ways.
+Using equals() method (Content Compare)
+
+Using == operator (Refrence Compare)
+
+By CompareTo() method
+
+Using equals() method
+
+equals() method compares two strings for equality. Its general syntax is,
+
+boolean equals (Object str)
+
+Example
+
+It compares the content of the strings. It will return true if string matches, else returns false.
+public class Demo
+{    
+    public static void main(String[] args) 
+{  
+    	String s = "Hell";
+    	String s1 = "Hello";
+    	String s2 = "Hello";
+    	boolean b = s1.equals(s2);    //true
+    	System.out.println(b);
+    	b =	s.equals(s1) ;   //false
+    	System.out.println(b);
+    }  
+}  
+
+Using == operator
+
+The double equal (==) operator compares two object references to check whether they refer to same instance. This also, will return true on successful match else returns false.
+public class Demo
+{    
+    public static void main(String[] args) 
+{  
+    	String s1 = "Java";
+    	String s2 = "Java";
+    	String s3 = new String ("Java");
+    	boolean b = (s1 == s2);     //true
+    	System.out.println(b);
+    	b =	(s1 == s3);      //false
+    	System.out.println(b);  
+    }  
+}  
+Explanation
+
+We are creating a new object using new operator, and thus it gets created in a non-pool memory area of the heap. s1 is pointing to the String in string pool while s3 is pointing to the String in heap and hence, when we compare s1 and s3, the answer is false.
+
+The following image will explain it more clearly.
+
+
+By compareTo() method
+
+String compareTo() method compares values and returns an integer value which tells if the string compared is less than, equal to or greater than the other string. It compares the String based on natural ordering i.e alphabetically. Its general syntax is.
+
+Syntax:
+int compareTo(String str)
+
+Example:
+public class HelloWorld
+{    
+    public static void main(String[] args) 
+{  
+    	String s1 = "Abhi";
+    	String s2 = "Viraaj";
+    	String s3 = "Abhi";
+    	int a = s1.compareTo(s2);     //return -21 because s1 < s2 
+    	System.out.println(a);
+    	a = s1.compareTo(s3);     //return 0 because s1 == s3 
+    	System.out.println(a);
+    	a = s2.compareTo(s1);     //return 21 because s2 > s1
+    	System.out.println(a);
+    }  
+}
+
+Java String class functions
+
+The methods specified below are some of the most commonly used methods of the String class in Java. We will learn about each method with help of small code examples for better understanding.
+
+charAt() method
+
+String charAt() function returns the character located at the specified index.
+public class Demo 
+{
+    public static void main(String[] args) 
+{   
+        String str = "ducatinidia";
+        System.out.println(str.charAt(2));
+    }
+}
+
+NOTE: Index of a String starts from 0, hence str.charAt(2) means third character of the String str.
+
+equalsIgnoreCase() method
+
+String equalsIgnoreCase() determines the equality of two Strings, ignoring their case (upper or lower case doesn't matter with this method).
+public class Demo 
+{
+    public static void main(String[] args) 
+{   
+        String str = "java";
+        System.out.println(str.equalsIgnoreCase("JAVA"));
+    }
+}
+
+indexOf() method
+
+String indexOf() method returns the index of first occurrence of a substring or a character. indexOf() method has four override methods:
+
+int indexOf(String str): It returns the index within this string of the first occurrence of the specified substring.
+
+int indexOf(int ch, int fromIndex): It returns the index within this string of the first occurrence of the specified character, starting the search at the specified index.
+
+int indexOf(int ch): It returns the index within this string of the first occurrence of the specified character.
+
+int indexOf(String str, int fromIndex): It returns the index within this string of the first occurrence of the specified substring, starting at the specified index.
+
+public class Ducat 
+{
+    public static void main(String[] args) 
+{
+        String str="DucatIndiaNoida";
+        System.out.println(str.indexOf('u'));   
+        System.out.println(str.indexOf('t', 3));    
+        String subString="Noida";
+        System.out.println(str.indexOf(subString)); 
+        System.out.println(str.indexOf(subString,7));   
+    }
+}
+
+NOTE: -1 indicates that the substring/Character is not found in the given String.
+
+length() method
+
+String length() function returns the number of characters in a String.
+public class Demo 
+{
+    public static void main(String[] args)
+ {   
+        String str = "Count me";
+        System.out.println(str.length());
+    }
+}
+
+replace() method
+
+String replace() method replaces occurances of character with a specified new character.
+public class Demo
+ {
+    public static void main(String[] args) 
+{   
+        String str = "Change me";
+        System.out.println(str.replace('m','M'));
+    }
+}
+substring() method
+
+String substring() method returns a part of the string. substring() method has two override methods.
+
+1. public String substring(int begin);
+
+2. public String substring(int begin, int end);
+
+The first argument represents the starting point of the subtring. If the substring() method is called with only one argument, the subtring returns characters from specified starting point to the end of original string.
+
+If method is called with two arguments, the second argument specify the end point of substring.
+
+public class Demo
+ {
+    public static void main(String[] args) 
+{
+        String str = "0123456789";
+        System.out.println(str.substring(4));
+        System.out.println(str.substring(4,7));        
+    }
+}
+
+toLowerCase() method
+
+String toLowerCase() method returns string with all uppercase characters converted to lowercase.
+
+public class Demo 
+{
+    public static void main(String[] args) 
+{
+        String str = "ABCDEF";
+        System.out.println(str.toLowerCase());   
+    }
+}
+
+toUpperCase() method
+
+This method returns string with all lowercase character changed to uppercase.
+public class Demo 
+{
+    public static void main(String[] args) 
+{
+        String str = "abcdef";
+        System.out.println(str.toUpperCase());   
+    }
+}
+
+valueOf() method
+
+String class uses overloaded version of valueOf() method for all primitive data types and for type Object.
+
+NOTE: valueOf() function is used to convert primitive data types into Strings.
+public class Demo 
+{
+    public static void main(String[] args) 
+{
+         int num = 35;
+         String s1 = String.valueOf(num);    
+         System.out.println(s1);
+         System.out.println("type of num is: "+s1.getClass().getName());   
+    }
+}
+
+toString() method
+
+String toString() method returns the string representation of an object. It is declared in the Object class, hence can be overridden by any java class. (Object class is super class of all java classes).
+public class Car 
+{
+    public static void main(String args[])
+    {
+        Car c = new Car();
+        System.out.println(c);
+    }
+    public String toString()
+    {
+        return "This is my car object";
+    }
+}
+
+Whenever we will try to print any object of class Car, its toString() function will be called.
+
+NOTE: If we don't override the toString() method and directly print the object, then it would print the object id that contains some hashcode.
+
+trim() method
+
+This method returns a string from which any leading and trailing whitespaces has been removed.
+public class Demo 
+{
+    public static void main(String[] args) 
+{
+        String str = "   hello  ";
+        System.out.println(str.trim());   
+    }
+}
+
+contains()Method
+
+String contains() method is used to check the sequence of characters in the given string. It returns true if a sequence of string is found else it returns false.
+
+
+public class Demo {
+    public static void main(String[] args) {
+         String a = "Hello welcome to ducatindia.com";  
+         boolean b = a.contains("ducatindia.com");  
+         System.out.println(b);    
+         System.out.println(a.contains("nodia"));     
+    }
+}
+endsWith() Method:
+	String endsWith() method is used to check whether the String ends with the given suffix or not .it returns true when suffix matches the string else it retruns false.
+
+String a1 = "Hello Welcome to Ducat";
+            
+            System.out.println(a1.endsWith("m"));
+            System.out.println(a1.endsWith("Ducat"));
+
+
+format() method
+
+String format() is a string method.it is used to the format of the given string.
+
+package strings;
+
+public class DemoString10 {
+
+	public static void main(String[] args) {
+		
+		
+		String a1 = String.format("%d", 128);
+		String a2 = String.format("%s", "Ducat");
+		String a3 = String.format("%f", 145.00);
+		String a4 = String.format("%x", 1366);
+		String a5 = String.format("%c", 'A');
+		
+		System.out.println("Interger Value: "+a1);
+		System.out.println("String Value: "+a2);
+		System.out.println("Float Value: "+a3);
+		System.out.println("Hexadecimal Value: "+a4);
+		System.out.println("Char Value : "+a5);
+
+	}
+
+}
+
+getBytes() Method
+
+String getBytes() method is used to get byte array of the Specified string
+
+package strings;
+
+public class DemoString11 {
+
+	public static void main(String[] args) {
+		
+		String s1 = "Welcome to Ducat";
+		
+		byte[] b = s1.getBytes();
+		
+		for(int i=0;i<b.length;i++)
+		{
+			System.out.print((char)(b[i]));
+		}
+
+	}
+
+}
+
+getChars() method
+
+String getChars() method is used to copy the content of the String into a char array
+
+
+isEmpty() Method
+
+String isEmpty() method is used to check whether the string is empty or not. It returns true when length string is zero else it returns false.
+
+public class IsEmptyDemo1
+{  
+    public static void main(String args[])
+    {  
+        String a="";  
+        String b="ducatindia";  
+        System.out.println(a.isEmpty());  
+        System.out.println(b.isEmpty());  
+    }
+}   
+    
+join() Method
+
+String join() method is used to join strings with the given delimiter. The given delimiter is copied with each element
+
+public class JoinDemo1
+{  
+    public static void main(String[] args) 
+    { 
+    String s = String.join("*","Welcome to ducatindia.com");
+    System.out.println(s);           
+        String date1 = String.join("/","23","01","2020");    
+System.out.println("Date: "+date1);    
+        String time1 = String.join(":", "2","39","10");  
+System.out.println("Time: "+time1);  
+    }  
+}  
+    
+startsWith() Method
+
+String startsWith() is a string method in java. It is used to check whether the given string starts with given prefix or not. It returns true when prefix matches the string else it returns false.
+
+public class Demo {
+    public static void main(String[] args) {
+          String str = "ducatindia";  
+          System.out.println(str.startsWith("s"));   
+          System.out.println(str.startsWith("t"));   
+          System.out.println(str.startsWith("ducat",0));   
+    }
+}
+The contentEquals() method searches a string to find out if it contains the exact same sequeance of characters in the specified string or string buffer
+
+
+    
+StringBuffer class in Java
+
+StringBuffer class is used to create a mutable string object. It means, it can be changed after it is created. It represents growable and writable character sequence.
+
+It is similar to String class in Java both are used to create string, but stringbuffer object can be changed.
+
+So StringBuffer class is used when we have to make lot of modifications to our string. It is also thread safe i.e multiple threads cannot access it simultaneously. StringBuffer defines 4 constructors.
+
+StringBuffer(): It creates an empty string buffer and reserves space for 16 characters.
+
+StringBuffer(int size): It creates an empty string and takes an integer argument to set capacity of the buffer.
+
+StringBuffer(String str): It creates a stringbuffer object from the specified string.
+
+StringBuffer(charSequence []ch): It creates a stringbuffer object from the charsequence array.
+
+Example: Creating a StringBuffer Object
+
+In this example, we are creating string buffer object using StrigBuffer class and also testing its mutability.
+public class Demo {
+
+	public static void main(String[] args) {
+
+		StringBuffer sb = new StringBuffer("ducat");
+		System.out.println(sb);
+		// modifying object
+		sb.append("india");
+		System.out.println(sb);    
+
+	}
+}
+
+Example: difference between String and StringBuffer
+
+In this example, we are creating objects of String and StringBuffer class and modifying them, but only stringbuffer object get modified. See the below example.
+class Test {
+ public static void main(String args[])
+ {
+  String str = "ducat";
+  str.concat("india");
+  System.out.println(str);     
+
+  StringBuffer strB = new StringBuffer("ducat");
+  strB.append("india");
+  System.out.println(strB);    
+ }
+}
+
+Explanation:
+
+Output is such because String objects are immutable objects. Hence, if we concatenate on the same String object, it won't be altered But StringBuffer creates mutable objects. Hence, it can be altered.
+
+Important methods of StringBuffer class
+
+The following methods are some most commonly used methods of StringBuffer class.
+
+append()
+This method will concatenate the string representation of any type of data to the end of the StringBuffer object. append() method has several overloaded forms.
+StringBuffer append(String str)
+StringBuffer append(int n)
+StringBuffer append(Object obj)
+
+The string representation of each parameter is appended to StringBuffer object.
+public class Demo {
+	public static void main(String[] args) {
+		StringBuffer str = new StringBuffer("test");
+		str.append(123);
+		System.out.println(str);
+	}
+}
+
+insert()
+
+This method inserts one string into another. Here are few forms of insert() method.
+StringBuffer insert(int index, String str)
+StringBuffer insert(int index, int num)
+StringBuffer insert(int index, Object obj)
+
+Here the first parameter gives the index at which position the string will be inserted and string representation of second parameter is inserted into StringBuffer object.
+public class Demo {
+	public static void main(String[] args) {
+		StringBuffer str = new StringBuffer("test");
+		str.insert(2, 123);
+		System.out.println(str);
+	}
+}
+
+reverse()
+
+This method reverses the characters within a StringBuffer object.
+public class Demo {
+	public static void main(String[] args) {
+		StringBuffer str = new StringBuffer("Hello");
+		str.reverse();
+		System.out.println(str);
+	}
+}
+
+replace()
+
+This method replaces the string from specified start index to the end index.
+public class Demo {
+	public static void main(String[] args) {
+		StringBuffer str = new StringBuffer("Hello World");
+		str.replace( 6, 11, "java");
+		System.out.println(str);
+	}
+}
+capacity()
+
+This method returns the current capacity of StringBuffer object.
+public class Demo {
+	public static void main(String[] args) {
+		StringBuffer str = new StringBuffer();
+		System.out.println( str.capacity() );
+	}
+}
+
+Note: Empty constructor reserves space for 16 characters. Therefore the output is 16.
+
+ensureCapacity()
+
+This method is used to ensure minimum capacity of StringBuffer object.
+
+If the argument of the ensureCapacity() method is less than the existing capacity, then there will be no change in existing capacity.
+
+If the argument of the ensureCapacity() method is greater than the existing capacity, then there will be change in the current capacity using following rule: newCapacity = (oldCapacity*2) + 2.
+public class Demo {
+	public static void main(String[] args) {
+		StringBuffer str = new StringBuffer();
+		System.out.println( str.capacity()); //output: 16 (since empty constructor reserves space for 16 characters)
+		str.ensureCapacity(30); //greater than the existing capacity
+		System.out.println( str.capacity()); //output: 34 (by following the rule - (oldcapacity*2) + 2.) i.e (16*2)+2 = 34.
+	}
+}
+
+Java StringBuilder class
+
+StringBuilder is identical to StringBuffer except for one important difference that it is not synchronized, which means it is not thread safe.
+
+StringBuilder also used for creating string object that is mutable and non synchronized. The StringBuilder class provides no guarantee of synchronization. StringBuffer and StringBuilder both are mutable but if synchronization is not required then it is recommend to use StringBuilder class.
+
+This class is located into java.lang package and signature of the class is as:
+public final class StringBuilder
+extends Object
+implements Serializable, CharSequence
+
+StringBuilder Constructors
+
+StringBuilder (): creates an empty StringBuilder and reserves room for 16 characters.
+StringBuilder (int size): create an empty string and takes an integer argument to set capacity of the buffer.
+StringBuilder (String str): create a StringBuilder object and initialize it with string str.
+StringBuilder (CharSequence seq): It creates stringbuilder object by using CharSequence object.
+
+Creating a StringBuilder Class
+Lets use StringBuilder class to create string object and check its mutability also
+
+public class Demo {
+  public static void main(String[] args) {
+    StringBuilder sb = new StringBuilder("ducat");
+    System.out.println(sb);
+    // modifying object
+    sb.append("india.com");
+    System.out.println(sb);
+  }
+}
+
+StringBuilder Methods
+
+StringBuilder class has various methods to handle string object, such as append, insert, replace, reverse etc. Lets see usage of these with the help of examples.
+
+Example of StringBuilder append string
+In this example, we are appending a new string using appen() method to the existing string object.
+
+public class Demo {
+
+  public static void main(String[] args) {
+
+    StringBuilder sb = new StringBuilder("ducat");
+    System.out.println(sb);
+    // appending object
+    sb.append("india.com");
+    System.out.println(sb);
+
+  }
+}
+
+StringBuilder Replace Method
+
+It is used to replace a substring from the string object. This method takes three arguments, first is start index, second is last index and third is substring to be replaced.
+
+
+public class Demo {
+  public static void main(String[] args) {
+    StringBuilder sb = new StringBuilder("Java is a programming language");
+    System.out.println(sb);
+    // replacing object
+    sb.replace( 10, 21, "computer");
+    System.out.println(sb);
+  }
+}
+
+StringBuilder Reverse Method
+
+It is used to reverse the string object. It completely reverses the string from start to end characters. See the below example.
+
+public class Demo {
+  public static void main(String[] args) {
+    StringBuilder sb = new StringBuilder("Java stringbuilder");
+    System.out.println(sb);
+    // reverse object
+    sb.reverse();
+    System.out.println(sb);
+  }
+}
+
+
+Java String tokenizer
+
+In Java, StringTokenizer is used to break a string into tokens based on provided delimiter. Delimiter can be specified either at the time of object creation or on a per-token basis.
+
+Its object internally maintains a current position within the string to be tokenized. It is located into java.util package.
+
+In string, tokenizer objects are maintained internally and returns a token of a substring from the given string.
+
+Note: StringTokenizer is a deprecated class and available only for compatibility reasons.
+
+We can get idea from the below image, how tokenizer breaks the string into tokens.
+Following are the constructors in string tokenizer
+
+1. StringTokenizer(String str)
+2. StringTokenizer(String str, String delim)
+
+3. StringTokenizer(String str, String delim, booleanreturnValue)
+
+Following are the methods in string tokenizer
+1. Boolean hasMoreTokens()
+
+2. String nextToken()
+
+3. String nextToken(String delim)
+
+4. Boolean hasMoreElements()
+
+5. Object nextElement()
+
+6. int countTokens()
+
+Example:
+
+In this example, we are using Stringtokenizer to break string into tokens based on space.
+
+import java.util.StringTokenizer;  
+public class TokenDemo1
+{  
+	public static void main(String args[])
+	{  
+		StringTokenizer obj = new StringTokenizer("Welcome to ducatindia"," ");  
+		while (obj.hasMoreTokens()) 
+		{  
+			System.out.println(obj.nextToken());  
+		}  
+	}  
+} 
+
+Example
+
+Lets take another example to understand tokenizer, here we are breaking string into tokens based on the colon (:) delimiter.
+
+
+import java.util.*;
+public class TokenDemo2{
+	public static void main(String args[])
+	{
+		String a= " : ";
+		String b= "Welcome : to : ducatindia : . : How : are : You : ?";
+		StringTokenizer c = new StringTokenizer(b, a);
+		int count1 = c.countTokens();
+		for (int i = 0; i<count1; i++)
+			System.out.println("token [" + i + "] : "+ c.nextToken());
+		StringTokenizer d= null;
+		while (c.hasMoreTokens())
+			System.out.println(d.nextToken());
+	}
+}
+	
+
+
