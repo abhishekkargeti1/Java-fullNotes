@@ -904,3 +904,218 @@ class a2 {
         }    
 }
 
+
+Polymorphism
+
+There is 2 type of polymorphism
+
+1. Compile time polymorphism(Early Binding)
+    whenever an object Bounds with thier functionality at compile time that concept is known as compile time Polymorphism.
+    Ex - method OverLoading
+2. Runtime polymorphism (Late Binding)
+    whenever an object bounds with their functionality at runtimethan this concept is known as runtime polymorphism.
+    Ex - method Overriding
+
+Metthod OverLoading
+
+Method OverLoading says you can create more then one method in one class having same name but diffrent in parameters.
+
+Rule :- There only one way to achive method OverLoading change in parameter.
+
+there are two ways to change in parameter:-
+
+1. Change in number of Arrguments.
+
+public class Methodoverloading {
+
+    static void sum(int x, int y) {
+        System.out.println("Sum of two Number " + (x + y));
+    }
+    static void sum(int x, int y,int z) {
+        System.out.println("Sum of two Number " + (x + y+z));
+    }
+    static void sum(int x, int y,int z,int a) {
+        System.out.println("Sum of two Number " + (x + y+z+a));
+    }
+    static void sum(int x, int y,int z,int a,int b) {
+        System.out.println("Sum of two Number " + (x + y+z+a+b));
+    }
+
+    public static void main(String[] args) {
+        sum(12, 13);
+        sum(120, 134,45);
+        sum(1290, 1323,56,780);
+        sum(121, 1300,67,887,899);
+        // sum(121, 1300,67,887,899,78);
+    }
+}
+
+Variable Argument (Varargs):(Java 4/5 Version)
+
+The varrags allows the method to accept zero or muliple arguments. Before varargs either we use overloaded method or take an array as the method parameter but it was not considered good because it leads to the maintenance problem. If we don't know how many argument we will have to pass in the method, varargs is the better approach.
+
+Advantage of Varargs:
+We don't have to provide overloaded methods so less code.
+
+Syntax of varargs:
+The varargs uses ellipsis i.e. three dots after the data type. Syntax is as follows:
+
+return_type method_name(data_type... variableName){}  
+
+
+Rules for varargs:
+
+While using the varargs, you must follow some rules otherwise program code won't compile. The rules are as follows:
+
+There can be only one variable argument in the method.
+Variable argument (varargs) must be the last argument.
+
+
+//VarArgs
+class TestVarArgs
+{
+  void sum(int... num)
+  {
+    int sum=0;
+    System.out.println("No Value pass as Arrgument");
+    //For Each Loop
+    for(int value:num)
+    {
+      System.out.print(value+" ");
+      sum+=value;
+    }
+    System.out.println("Sum is : "+sum);
+  }
+  
+  public static void main(String... args)
+  {
+    TestVarArgs t1 = new TestVarArgs();
+    t1.sum();
+    t1.sum(85,96,74,55,962,63,41,25,63,85);
+  }
+}
+
+
+//VarArgs
+class TestVarArgs
+{
+  void sum(String... num)
+  {
+    System.out.println("No Value pass as Arrgument");
+    //For Each Loop
+    for(String value:num)
+    {
+      System.out.print(value+" ");
+      
+    }
+  }
+  
+  public static void main(String... args)
+  {
+    TestVarArgs t1 = new TestVarArgs();
+    t1.sum();
+    t1.sum("Ajay","Sachin","Manish","Vijay","Amit","kamal");
+  }
+}
+
+//VarArgs
+class TestVarArgs
+{
+  void sum(int n,String... num)
+  {
+    System.out.println(n);
+    //For Each Loop
+    for(String value:num)
+    {
+      System.out.print(value+" ");
+      
+    }
+  }
+  
+  public static void main(String... args)
+  {
+    TestVarArgs t1 = new TestVarArgs();
+    t1.sum(85,"Yash");
+    t1.sum(100,"Ajay","Sachin","Manish","Vijay","Amit","kamal");
+  }
+}
+
+
+//VarArgs
+import java.util.Scanner;
+class TestVarArgs
+{
+  String msg = "  ";
+  void sum(String... num)
+  {
+    
+    //For Each Loop
+    for(String value:num)
+    {
+      msg+=value;
+      
+    }
+    
+  }
+  void display()
+  {
+    System.out.println(msg);
+  }
+  
+  public static void main(String... args)
+  {
+    TestVarArgs t1 = new TestVarArgs();
+    Scanner s1 = new Scanner(System.in);
+    for(int i=1;i<=5;i++)
+    {
+      String name = s1.nextLine();
+      t1.sum(name);
+    }
+    t1.display();
+  }
+}
+
+Command line arguments in java:-
+
+To pass command-line arguments in Java, you can pass them as space-separated values when running the Java program. The arguments are then stored in an array called args in the main method. 
+
+
+class TestCommandLine
+{
+  public static void main(String[] args)
+  {
+    System.out.println("Number of Command Line Argument = " + args.length);
+    
+    int sum = 0;
+    for(int i=0 ; i<args.length;i++)
+    {
+      System.out.println(args[i]);
+      sum+=Integer.parseInt(args[i]);
+    }
+    System.out.println("Sum is : "+sum);
+  }
+}
+
+
+Method Overridding
+
+example
+
+class base{
+    int x =100;
+    void show(){
+        System.out.println("Hello i am base class");
+    }
+}
+
+class methodoverridding extends base {
+    int x =200;// datamember overridding
+    void show()// methodoverridding
+    {
+        System.out.println("hello i am child class");
+    }
+    public static void main(String []args){
+        methodoverridding m1 = new methodoverridding();
+        m1.show();
+    }
+}
