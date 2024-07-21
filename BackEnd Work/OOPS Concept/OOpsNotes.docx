@@ -326,7 +326,7 @@ class RegistrationForm{ 
         System.out.println("Gender: "+gender);    
         System.out.println("Language: "+language);    
         System.out.println("Zip Code: "+zip_code);    
-        System.out.println();  \
+        System.out.println();  
         }    
         RegistrationForm(String name,String email,String password,long phone_number,String gender,String language,int zip_code,String about)
         {    
@@ -366,7 +366,7 @@ class RegistrationForm{ 
 Difference between constructor and method.
 
 Constructor                                                     Method
-A constructor is used to initialize                             A method is used to exose the Behaviour of an object.
+A constructor is used to initialize                             A method is used to expose the Behaviour of an object.
 to state of object.                                             A method must have a return type.
 The constructor must have no return type.
 The constructor is invoke implicitly.                           The method is invoke explicitly.
@@ -812,24 +812,19 @@ Hierarchical inheritance
 
     Example :-
 
-        class Car
-{
-  String brand;
-  String name;
-  String price;
-  String seatingCapacity;
-  String fuelTank;
+class Car{
+    String brand;
+    String name;
+    String price;
+    String seatingCapacity;
+    String fuelTank;
   
-  void show()
-  {
-    System.out.println(brand+" "+name+" "+price+" "+seatingCapacity+" "+fuelTank);
-  }
-  
+    void show(){
+        System.out.println(brand+" "+name+" "+price+" "+seatingCapacity+" "+fuelTank);
+    }
 }
-class Thar extends Car
-{
-  Thar(String brand,String name,String price,String seatingCapacity,String fuelTank)
-  {
+class Thar extends Car{
+  Thar(String brand,String name,String price,String seatingCapacity,String fuelTank){
     this.brand=brand;
     this.name=name;
     this.price=price;
@@ -837,10 +832,8 @@ class Thar extends Car
     this.fuelTank=fuelTank;
   }
 }
-class Scorpio extends Car
-{
-  Scorpio(String brand,String name,String price,String seatingCapacity,String fuelTank)
-  {
+class Scorpio extends Car{
+  Scorpio(String brand,String name,String price,String seatingCapacity,String fuelTank){
     this.brand=brand;
     this.name=name;
     this.price=price;
@@ -848,10 +841,8 @@ class Scorpio extends Car
     this.fuelTank=fuelTank;
   }
 }
-class XUV7oo extends Car
-{
-  XUV7oo(String brand,String name,String price,String seatingCapacity,String fuelTank)
-  {
+class XUV7oo extends Car{
+  XUV7oo(String brand,String name,String price,String seatingCapacity,String fuelTank){
     this.brand=brand;
     this.name=name;
     this.price=price;
@@ -860,10 +851,8 @@ class XUV7oo extends Car
   }
   
 }
-class TestInteritance
-{
-  public static void main(String[] args)
-  {
+class TestInteritance{
+  public static void main(String[] args){
     Thar t1 = new Thar("Mahindra","Thar","15.67lacs","4 Seater","56 Liters");
     Scorpio s1 = new Scorpio("Mahindra","Scorpio","23.67lacs","7 Seater","60 Liters");
     XUV7oo x1 = new XUV7oo("Mahindra","XUV7oo",".67lacs","7 Seater","60 Liters");
