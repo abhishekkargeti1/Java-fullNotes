@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- #BeginTemplate "../../rapidtables.dwt" -->
+
+<head>
+
+<title>Simple interest calculator</title>
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+<div id="lcol">
+
+  <div id="doc">
+  <!-- #BeginEditable "doctext" -->
+    <h1>Simple interest calculator</h1>
+    <p>Simple interest calculator.</p>
+     <form action="SecondServlet" autocomplete="off">
+    <table class="calc2">
+      
+      <tr>
+        <td>Principal amount:</td>
+        <td class="math" id="cur1" style="text-align:right">$</td>
+        <td class="math"><input id="Text1" name="Text1" type="number" class="intext" style="width:140px" value="1000"> <input type="button" value="&times;" style="font-size:medium" onclick="OnClear(0)"></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Annual interest rate:</td>
+        <td>&nbsp;</td>
+        <td class="math"><input id="Text2" name="Text2" type="number" min="0" max="100" class="intext" style="width:140px" value="4"> %</td>
+        <td colspan="2">per year</td>
+      </tr>
+      <tr>
+        <td>Period:</td>
+        <td>&nbsp;</td>
+        <td class="math" colspan="3"><input id="Text3" name="Text3" type="number" min="1" max="100" class="intext" style="width:140px" value="10">  
+          <select id="Select2" name="Select2" style="font-size:medium">
+            <option>Days</option>
+            <option>Weeks</option>
+            <option>Months</option>
+            <option>Quarters</option>
+            <option selected="selected">Years</option>
+          </select></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td colspan="3">
+          <input  type="submit" value="Calculate" style="font-size:medium; width:120px; padding:5px">
+          <input  type="reset" value="Clear" style="font-size:medium; width:120px; padding:5px"></td>
+      </tr>
+      
+    </table>
+     
+     </form>
+  </div>
+  
+   
+</div>
+
+
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>
